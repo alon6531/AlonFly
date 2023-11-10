@@ -3,13 +3,15 @@
 #include "SFML/Graphics.hpp"
 #include <iostream>
 #include "MainMenuState.h"
+#include "GameState.h"
+#include <stack>
 
 class GameEngine
 {
 private:
 	sf::RenderWindow* window;
 	float dt;
-	State* state;
+	std::stack<State*> states;
 
 public:
 	GameEngine();

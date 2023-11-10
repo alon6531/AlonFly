@@ -1,6 +1,6 @@
 #include "GameState.h"
 
-void GameState::Update(float dt, State& state)
+void GameState::Update(float dt, std::stack<State*>& states)
 {
 	std::cout << "fgf";
 }

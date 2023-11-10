@@ -2,10 +2,10 @@
 
 GameEngine::GameEngine()
 {
-	window = new sf::RenderWindow(sf::VideoMode(600, 700), "AlonFly", sf::Style::Default);
+	window = new sf::RenderWindow(sf::VideoMode(600, 700), "AlonFly", sf::Style::Close);
 	dt = 0;
 
-    state = new MainMenuState();
+    states.push(new MainMenuState());
 }
 
 GameEngine::~GameEngine()
@@ -30,14 +30,14 @@ void GameEngine::WinEvent()
 void GameEngine::Update()
 {
 	this->WinEvent();
-    this->state->Update(this->dt, *this->state);
+    this->states.top()->Update(this->dt, this->states);
 }
 
 void GameEngine::Render()
 {
     this->window->clear();
 
-    this->state->Render(*this->window);
+    this->states.top()->Render(*this->window);
 
 
     this->window->display();

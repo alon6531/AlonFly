@@ -8,6 +8,7 @@ Button::Button(sf::Vector2f Pos, sf::Vector2f Size, sf::Color Color, std::string
 	this->obj.setSize(this->size);
 	this->obj.setFillColor(Color);
 	texture = NULL;
+	window = NULL;
 
 	font.loadFromFile("PixellettersFull.ttf");
 	text.setPosition(obj.getPosition());
@@ -19,14 +20,16 @@ Button::Button(sf::Vector2f Pos, sf::Vector2f Size, sf::Color Color, std::string
 
 void Button::Render(sf::RenderWindow& Window)
 {
+	window = &Window;
 	Window.draw(obj);
 	Window.draw(text);
+
 }
 
 bool Button::IsTrigger()
 {
 	if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
-		sf::Vector2f mousePos = sf::Vector2f(sf::Mouse::getPosition().x - 670, sf::Mouse::getPosition().y - 230);
+		sf::Vector2f mousePos = sf::Vector2f(sf::Mouse::getPosition(*window).x, sf::Mouse::getPosition(*window).y);
 		if (mousePos.x > this->obj.getPosition().x &&
 			mousePos.x < this->obj.getPosition().x + this->obj.getSize().x)
 		{
