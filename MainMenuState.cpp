@@ -3,12 +3,12 @@
 
 MainMenuState::MainMenuState()
 {
-	this->startB = new Button(sf::Vector2f(300, 600), sf::Vector2f(150, 75), sf::Color::Red, "Play");
+	this->startB = new Button(sf::Vector2f(610, 600), sf::Vector2f(150, 75), sf::Color::Red, "Play");
 	endState = false;
 
 
 
-	title = new Text("*AlonFly*", sf::Vector2f(275, 300));
+	title = new Text("*AlonFly*", sf::Vector2f(580, 300));
 }
 
 void MainMenuState::Update(float dt, std::stack<State*>& states)
