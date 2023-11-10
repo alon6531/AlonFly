@@ -4,25 +4,29 @@ MoveComponent::MoveComponent(sf::Sprite& Sprite, float MoveSpeed)
 	: sprite(Sprite)
 {
 
-	moveSpeed = MoveSpeed / 100;
+	moveSpeed = MoveSpeed;
 }
 
-void MoveComponent::Update(float dt)
+void MoveComponent::MoveLeft(float dt)
 {
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
-		sprite.move(-moveSpeed, 0);
-		sprite.setRotation(-90);
-	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-		sprite.move(moveSpeed, 0);
-		sprite.setRotation(90);
-	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-		sprite.move(0, -moveSpeed);
-		sprite.setRotation(0);
-	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
-		sprite.move(0, moveSpeed);
-		sprite.setRotation(180);
-	}
+	sprite.move(-moveSpeed * dt, 0);
+	sprite.setRotation(-90);
+}
+
+void MoveComponent::MoveRight(float dt)
+{
+	sprite.move(moveSpeed* dt, 0);
+	sprite.setRotation(90);
+}
+
+void MoveComponent::MoveUp(float dt)
+{
+	sprite.move(0, -moveSpeed * dt);
+	sprite.setRotation(0);
+}
+
+void MoveComponent::MoveDown(float dt)
+{
+	sprite.move(0, moveSpeed* dt);
+	sprite.setRotation(180);
 }

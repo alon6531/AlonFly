@@ -6,11 +6,13 @@
 #include "GameState.h"
 #include <stack>
 
+
 class GameEngine
 {
 private:
 	sf::RenderWindow* window;
 	float dt;
+	sf::Clock clock;
 	std::stack<State*> states;
 
 public:

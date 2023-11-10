@@ -13,77 +13,107 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="States">
+      <UniqueIdentifier>{72fb6bf7-7f11-479c-bd74-e6bf2ac2b93a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Widget">
+      <UniqueIdentifier>{44fc7cba-c5b3-45ba-92ff-950a75a2333b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component">
+      <UniqueIdentifier>{147fbef1-4828-416c-8c45-804e68aee50d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enitity">
+      <UniqueIdentifier>{85c4fc22-e32d-49df-b6e7-e6cb99b5d31b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enitity\Type">
+      <UniqueIdentifier>{c21c5e47-6005-450b-81cd-70530a81e2e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine">
+      <UniqueIdentifier>{56b5bd93-e6e0-439e-9ed9-41661a1bc680}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GameEngine.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="State.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="GameState.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>States</Filter>
     </ClCompile>
     <ClCompile Include="MainMenuState.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="State.cpp">
+      <Filter>States</Filter>
     </ClCompile>
     <ClCompile Include="Button.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Widget</Filter>
     </ClCompile>
     <ClCompile Include="Text.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Entity.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MoveComponent.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Projectile.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Widget</Filter>
     </ClCompile>
     <ClCompile Include="HitBoxComponent.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveComponent.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Enitity</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Enitity\Type</Filter>
+    </ClCompile>
+    <ClCompile Include="Projectile.cpp">
+      <Filter>Enitity\Type</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEngine.cpp">
+      <Filter>GameEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>GameEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="F15.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameEngine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="State.h">
-      <Filter>Header Files</Filter>
+      <Filter>States</Filter>
     </ClInclude>
     <ClInclude Include="GameState.h">
-      <Filter>Header Files</Filter>
+      <Filter>States</Filter>
     </ClInclude>
     <ClInclude Include="MainMenuState.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Button.h">
-      <Filter>Header Files</Filter>
+      <Filter>States</Filter>
     </ClInclude>
     <ClInclude Include="Text.h">
-      <Filter>Header Files</Filter>
+      <Filter>Widget</Filter>
     </ClInclude>
-    <ClInclude Include="Entity.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MoveComponent.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Projectile.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Button.h">
+      <Filter>Widget</Filter>
     </ClInclude>
     <ClInclude Include="HitBoxComponent.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveComponent.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Enitity</Filter>
+    </ClInclude>
+    <ClInclude Include="Projectile.h">
+      <Filter>Enitity\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Enitity\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEngine.h">
+      <Filter>GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="F15.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -3,8 +3,7 @@
 #include "Projectile.h"
 #include "Timer.h"
 
-
-class Player :
+class F15 :
     public Entity
 {
 private:
@@ -13,9 +12,8 @@ private:
     std::vector<Projectile*> rightProj;
 
     Timer* delay;
-
 public:
-    Player(const std::string& string, const sf::Vector2f& scale);
+    F15(const sf::Vector2f& Pos);
 
     void Update(float dt);
 

@@ -1,12 +1,12 @@
 #pragma once
 #include "State.h"
-#include "Entity.h"
+#include "F15.h"
 
 class GameState :
     public State
 {
 private:
-    Entity* player;
+    F15* f15;
 
 public:
     GameState();

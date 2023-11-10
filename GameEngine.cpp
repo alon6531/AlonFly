@@ -29,8 +29,12 @@ void GameEngine::WinEvent()
 
 void GameEngine::Update()
 {
+   
 	this->WinEvent();
     this->states.top()->Update(this->dt, this->states);
+
+    dt = clock.restart().asSeconds();
+    std::cout << dt << "\n";
 }
 
 void GameEngine::Render()

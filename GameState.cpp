@@ -2,19 +2,18 @@
 
 GameState::GameState()
 {
-	player = new Entity("plane.png", sf::Vector2f(25, 25));
-	player->AddHitBoxComponent();
-	player->AddMoveComponent(10);
+	f15 = new F15(sf::Vector2f(0, 0));
+
 }
 
 void GameState::Update(float dt, std::stack<State*>& states)
 {
-	player->Update(dt);
+	f15->Update(dt);
 }
 
 void GameState::Render(sf::RenderWindow& window)
 {
-	player->Render(window);
+	f15->Render(window);
 }
 
 
