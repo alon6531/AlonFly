@@ -60,9 +60,6 @@
     <ClCompile Include="Entity.cpp">
       <Filter>Enitity</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Enitity\Type</Filter>
-    </ClCompile>
     <ClCompile Include="Projectile.cpp">
       <Filter>Enitity\Type</Filter>
     </ClCompile>
@@ -73,7 +70,10 @@
       <Filter>GameEngine</Filter>
     </ClCompile>
     <ClCompile Include="F15.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Enitity\Type</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineComponent.cpp">
+      <Filter>Component</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -104,9 +104,6 @@
     <ClInclude Include="Projectile.h">
       <Filter>Enitity\Type</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Enitity\Type</Filter>
-    </ClInclude>
     <ClInclude Include="GameEngine.h">
       <Filter>GameEngine</Filter>
     </ClInclude>
@@ -114,7 +111,10 @@
       <Filter>GameEngine</Filter>
     </ClInclude>
     <ClInclude Include="F15.h">
-      <Filter>Header Files</Filter>
+      <Filter>Enitity\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineComponent.h">
+      <Filter>Component</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

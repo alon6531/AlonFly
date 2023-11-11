@@ -8,7 +8,7 @@ private:
 	float maxTimer;
 
 public:
-	Timer(float MaxTimer);
+	Timer(float MaxTimer, float StartTime = -1);
 
 	void Update(float dt);
 

@@ -5,28 +5,30 @@ MoveComponent::MoveComponent(sf::Sprite& Sprite, float MoveSpeed)
 {
 
 	moveSpeed = MoveSpeed;
+	sprite.setRotation(90);
+
 }
 
 void MoveComponent::MoveLeft(float dt)
 {
 	sprite.move(-moveSpeed * dt, 0);
-	sprite.setRotation(-90);
+
 }
 
 void MoveComponent::MoveRight(float dt)
 {
 	sprite.move(moveSpeed* dt, 0);
-	sprite.setRotation(90);
+
 }
 
 void MoveComponent::MoveUp(float dt)
 {
 	sprite.move(0, -moveSpeed * dt);
-	sprite.setRotation(0);
+
 }
 
 void MoveComponent::MoveDown(float dt)
 {
 	sprite.move(0, moveSpeed* dt);
-	sprite.setRotation(180);
+
 }

@@ -10,8 +10,12 @@ private:
     sf::Vector2i dir;
     std::vector<Projectile*> leftProj;
     std::vector<Projectile*> rightProj;
+    std::vector<Projectile*> bomb;
 
-    Timer* delay;
+    Timer* bulletDelay;
+    Timer* bombDelay;
+
+
 public:
     F15(const sf::Vector2f& Pos);
 

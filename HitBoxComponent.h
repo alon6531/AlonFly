@@ -7,7 +7,7 @@ class HitBoxComponent
 private:
 	sf::Sprite& sprite;
 	sf::RectangleShape hitBox;
-
+	bool cantExitScreen;
 
 
 public:
@@ -17,5 +17,7 @@ public:
 	void Update();
 
 	void Render(sf::RenderWindow& window);
+
+	void SetCantExitScreen();
 };
 

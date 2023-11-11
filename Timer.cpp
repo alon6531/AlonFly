@@ -1,9 +1,12 @@
 #include "Timer.h"
 
-Timer::Timer(float MaxTimer)
+
+Timer::Timer(float MaxTimer, float StartTime)
 {
+	if (StartTime == -1)
+		StartTime = MaxTimer;
 	maxTimer = MaxTimer;
-	timer = maxTimer;
+	timer = StartTime;
 }
 
 void Timer::Update(float dt)

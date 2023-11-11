@@ -6,6 +6,8 @@ class GameState :
     public State
 {
 private:
+    sf::Sprite bg;
+    sf::Texture texture;
     F15* f15;
 
 public:

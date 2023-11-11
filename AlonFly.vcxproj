@@ -138,11 +138,11 @@
     <ClCompile Include="F15.cpp" />
     <ClCompile Include="GameEngine.cpp" />
     <ClCompile Include="GameState.cpp" />
+    <ClCompile Include="EngineComponent.cpp" />
     <ClCompile Include="HitBoxComponent.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainMenuState.cpp" />
     <ClCompile Include="MoveComponent.cpp" />
-    <ClCompile Include="Player.cpp" />
     <ClCompile Include="Projectile.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="Text.cpp" />
@@ -154,10 +154,10 @@
     <ClInclude Include="F15.h" />
     <ClInclude Include="GameEngine.h" />
     <ClInclude Include="GameState.h" />
+    <ClInclude Include="EngineComponent.h" />
     <ClInclude Include="HitBoxComponent.h" />
     <ClInclude Include="MainMenuState.h" />
     <ClInclude Include="MoveComponent.h" />
-    <ClInclude Include="Player.h" />
     <ClInclude Include="Projectile.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="Text.h" />

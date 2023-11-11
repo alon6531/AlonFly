@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\programming projects\AlonFly\AlonFly\</FILEPATH>
+      <FILENAME>Entity.cpp</FILENAME>
+      <LINE>3</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Entity::gassComponent' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Entity::{ctor}</FUNCTION>
+    <DECORATED>??0Entity@@QEAA@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV?$Vector2@M@sf@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Entity::gassComponent</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\programming projects\AlonFly\AlonFly\</FILEPATH>
+      <FILENAME>Entity.cpp</FILENAME>
+      <LINE>17</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Entity::gassComponent' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Entity::{ctor}</FUNCTION>
+    <DECORATED>??0Entity@@QEAA@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV?$Vector2@M@sf@@1@Z</DECORATED>
+    <FUNCLINE>17</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Entity::gassComponent</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

@@ -1,2 +1,10 @@
 ﻿  F15.cpp
+E:\programming projects\AlonFly\AlonFly\F15.cpp(7,112): warning C4305: 'argument': truncation from 'double' to 'T'
+          with
+          [
+              T=float
+          ]
+  GameEngine.cpp
+  Projectile.cpp
+  Generating Code...
   AlonFly.vcxproj -> E:\programming projects\AlonFly\x64\Debug\AlonFly.exe
