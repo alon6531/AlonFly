@@ -31,6 +31,12 @@
     <Filter Include="GameEngine">
       <UniqueIdentifier>{56b5bd93-e6e0-439e-9ed9-41661a1bc680}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Map">
+      <UniqueIdentifier>{99f2a13f-4b21-4afc-9daf-65481db44d2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enitity\Type\Plane">
+      <UniqueIdentifier>{706b8e3d-2108-4321-8b4c-998fd9503233}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -60,20 +66,44 @@
     <ClCompile Include="Entity.cpp">
       <Filter>Enitity</Filter>
     </ClCompile>
-    <ClCompile Include="Projectile.cpp">
-      <Filter>Enitity\Type</Filter>
-    </ClCompile>
     <ClCompile Include="GameEngine.cpp">
       <Filter>GameEngine</Filter>
     </ClCompile>
     <ClCompile Include="Timer.cpp">
       <Filter>GameEngine</Filter>
     </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Map1.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
     <ClCompile Include="F15.cpp">
+      <Filter>Enitity\Type\Plane</Filter>
+    </ClCompile>
+    <ClCompile Include="Helicopter.cpp">
+      <Filter>Enitity\Type\Plane</Filter>
+    </ClCompile>
+    <ClCompile Include="Mig29.cpp">
+      <Filter>Enitity\Type\Plane</Filter>
+    </ClCompile>
+    <ClCompile Include="Projectile.cpp">
+      <Filter>Enitity\Type\Plane</Filter>
+    </ClCompile>
+    <ClCompile Include="Plane.cpp">
       <Filter>Enitity\Type</Filter>
     </ClCompile>
-    <ClCompile Include="EngineComponent.cpp">
+    <ClCompile Include="HealthComponent.cpp">
       <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimScene1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AirportMap.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -101,20 +131,44 @@
     <ClInclude Include="Entity.h">
       <Filter>Enitity</Filter>
     </ClInclude>
-    <ClInclude Include="Projectile.h">
-      <Filter>Enitity\Type</Filter>
-    </ClInclude>
     <ClInclude Include="GameEngine.h">
       <Filter>GameEngine</Filter>
     </ClInclude>
     <ClInclude Include="Timer.h">
       <Filter>GameEngine</Filter>
     </ClInclude>
+    <ClInclude Include="Map1.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Map</Filter>
+    </ClInclude>
     <ClInclude Include="F15.h">
+      <Filter>Enitity\Type\Plane</Filter>
+    </ClInclude>
+    <ClInclude Include="Helicopter.h">
+      <Filter>Enitity\Type\Plane</Filter>
+    </ClInclude>
+    <ClInclude Include="Mig29.h">
+      <Filter>Enitity\Type\Plane</Filter>
+    </ClInclude>
+    <ClInclude Include="Projectile.h">
+      <Filter>Enitity\Type\Plane</Filter>
+    </ClInclude>
+    <ClInclude Include="Plane.h">
       <Filter>Enitity\Type</Filter>
     </ClInclude>
-    <ClInclude Include="EngineComponent.h">
+    <ClInclude Include="HealthComponent.h">
       <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimScene1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AirportMap.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

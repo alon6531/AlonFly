@@ -34,7 +34,6 @@ void GameEngine::Update()
     this->states.top()->Update(this->dt, this->states);
 
     dt = clock.restart().asSeconds();
-    std::cout << dt << "\n";
 }
 
 void GameEngine::Render()

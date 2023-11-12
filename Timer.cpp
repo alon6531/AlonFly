@@ -23,3 +23,13 @@ void Timer::Reset()
 {
 	timer = maxTimer;
 }
+
+float Timer::CurrentTime()
+{
+	return timer;
+}
+
+float Timer::MaxTime()
+{
+	return maxTimer;
+}

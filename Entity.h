@@ -2,7 +2,8 @@
 
 #include "MoveComponent.h"
 #include "HitBoxComponent.h"
-#include "EngineComponent.h"
+#include "HealthComponent.h"
+#include "Timer.h"
 
 class Entity
 {
@@ -11,7 +12,7 @@ private:
 	sf::Texture texture;
 	MoveComponent* moveComponent;
 	HitBoxComponent* hitBoxComponent;
-	EngineComponent* engineComponent;
+	HealthComponent* healthComponent;
 
 public:
 	Entity(const std::string& string, const sf::Vector2f& scale = sf::Vector2f(100, 100));
@@ -21,15 +22,23 @@ public:
 
 	void AddMoveComponent(float MoveSpeed);
 	void AddHitBoxComponent();
-	void AddEngineComponent(const std::string& string, const sf::Vector2f& PosL, const sf::Vector2f& PosR, const sf::Vector2f& Scale);
+	void AddHealthComponent(int MaxHealth);
+
 
 	bool IsCollide(const sf::FloatRect& Rect);
-	void Update(float dt);
+	virtual void Update(float dt);
 
-	void Render(sf::RenderWindow& window);
+	virtual void Render(sf::RenderWindow& window);
 
 	void Move(float dt, const sf::Vector2i& Dir);
 	
 	void CantExitScreen();
+
+	int GetHealth();
+
+	void OnHit(int Damage);
+
+	void SetSpeed(float Speed);
+	void SetTexture(const std::string& FilePath);
 };
 

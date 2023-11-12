@@ -5,7 +5,6 @@ MoveComponent::MoveComponent(sf::Sprite& Sprite, float MoveSpeed)
 {
 
 	moveSpeed = MoveSpeed;
-	sprite.setRotation(90);
 
 }
 
@@ -31,4 +30,9 @@ void MoveComponent::MoveDown(float dt)
 {
 	sprite.move(0, moveSpeed* dt);
 
+}
+
+void MoveComponent::SetSpeed(float Speed)
+{
+	moveSpeed = Speed;
 }

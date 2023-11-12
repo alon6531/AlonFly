@@ -15,5 +15,8 @@ public:
 	bool IsEnd();
 
 	void Reset();
+
+	float CurrentTime();
+	float MaxTime();
 };
 

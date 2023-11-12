@@ -16,5 +16,7 @@ public:
 	void MoveRight(float dt);
 	void MoveUp(float dt);
 	void MoveDown(float dt);
+
+	void SetSpeed(float Speed);
 };
 

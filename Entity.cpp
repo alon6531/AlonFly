@@ -43,9 +43,9 @@ void Entity::AddHitBoxComponent()
 	hitBoxComponent = new HitBoxComponent(sprite);
 }
 
-void Entity::AddEngineComponent(const std::string& string, const sf::Vector2f& PosL, const sf::Vector2f& PosR, const sf::Vector2f& Scale)
+void Entity::AddHealthComponent(int MaxHealth)
 {
-	engineComponent = new EngineComponent(sprite, string, PosL, PosR, Scale);
+	healthComponent = new HealthComponent(MaxHealth);
 }
 
 bool Entity::IsCollide(const sf::FloatRect& Rect)
@@ -59,10 +59,6 @@ void Entity::Update(float dt)
 		hitBoxComponent->Update();
 	}
 
-	if (engineComponent) {
-		engineComponent->Update(dt);
-	}
-
 }
 
 void Entity::Render(sf::RenderWindow& window)
@@ -73,9 +69,6 @@ void Entity::Render(sf::RenderWindow& window)
 		hitBoxComponent->Render(window);
 	}
 
-	if (engineComponent) {
-		engineComponent->Render(window);
-	}
 }
 
 void Entity::Move(float dt, const sf::Vector2i& Dir)
@@ -83,12 +76,11 @@ void Entity::Move(float dt, const sf::Vector2i& Dir)
 	if (moveComponent) {
 		if (Dir == sf::Vector2i(-1, 0)) {
 			moveComponent->MoveLeft(dt);
+			
 		}
 		if (Dir == sf::Vector2i(1, 0)) {
 			moveComponent->MoveRight(dt);
-			if (engineComponent) {
-				engineComponent->StartEngine();
-			}
+			
 		}
 		if (Dir == sf::Vector2i(0, -1)) {
 			moveComponent->MoveUp(dt);
@@ -108,6 +100,31 @@ void Entity::CantExitScreen()
 		hitBoxComponent->SetCantExitScreen();
 	}
 }
+
+int Entity::GetHealth()
+{
+	return healthComponent->GetHealth();
+}
+
+void Entity::OnHit(int Damage)
+{
+	if (hitBoxComponent)
+		healthComponent->OnHit(Damage);
+}
+
+void Entity::SetSpeed(float Speed)
+{
+	if (moveComponent) {
+		moveComponent->SetSpeed(Speed);
+	}
+}
+
+void Entity::SetTexture(const std::string& FilePath)
+{
+	texture.loadFromFile(FilePath);
+	sprite.setTexture(texture);
+}
+
 
 
 
