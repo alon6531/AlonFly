@@ -1,3 +1,2 @@
-﻿  AnimScene1.cpp
-E:\programming projects\AlonFly\AlonFly\AnimScene1.cpp(39,24): warning C4305: 'argument': truncation from 'double' to 'float'
+﻿  GameState.cpp
   AlonFly.vcxproj -> E:\programming projects\AlonFly\x64\Debug\AlonFly.exe

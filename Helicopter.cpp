@@ -16,7 +16,7 @@ Helicopter::Helicopter(const sf::Vector2f& Pos) : Plane("Image/Helicopter/1.png"
 	up_Down = false;
 }
 
-void Helicopter::Update(float dt)
+void Helicopter::Update(float dt, sf::Sprite* TargetSprite)
 {
 
 	std::cout << animDelay->CurrentTime() << "\n";
@@ -63,7 +63,7 @@ void Helicopter::Update(float dt)
 
 	animDelay->Update(dt);
 
-	Plane::Update(dt);
+	Plane::Update(dt, TargetSprite);
 }
 
 void Helicopter::Render(sf::RenderWindow& Window)

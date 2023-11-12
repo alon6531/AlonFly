@@ -11,7 +11,7 @@ private:
 
 public:
     Helicopter(const sf::Vector2f& Pos);
-    void Update(float dt) override;
+    void Update(float dt, sf::Sprite* TargetSprite = NULL) override;
 
     void Render(sf::RenderWindow& Window);
 };

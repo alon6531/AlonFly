@@ -3,7 +3,7 @@
 
 AnimScene1::AnimScene1()
 {
-	texture.loadFromFile("Image/f15Land1.png");
+	texture.loadFromFile("Image/F15/f15Land1.png");
 	sprite.setTexture(texture);
 	sprite.setScale(1, 1);
 	sprite.setPosition(sf::Vector2f(0, 650));
@@ -28,7 +28,7 @@ void AnimScene1::Update(float dt)
 		{
 			moveForword = false;
 			takeOf->Reset();
-			texture.loadFromFile("Image/f15Land2.png");
+			texture.loadFromFile("Image/F15/f15Land2.png");
 			sprite.setTexture(texture);
 		}
 	}

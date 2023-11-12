@@ -1,6 +1,6 @@
 #include "F15.h"
 
-F15::F15(const sf::Vector2f& Pos) : Plane("Image/f15_1.png", Pos, sf::Vector2f(80, 100))
+F15::F15(const sf::Vector2f& Pos) : Plane("Image/F15/f15_1.png", Pos, sf::Vector2f(80, 100))
 {
 	AddHitBoxComponent();
 	AddMoveComponent(300);
@@ -13,19 +13,19 @@ F15::F15(const sf::Vector2f& Pos) : Plane("Image/f15_1.png", Pos, sf::Vector2f(8
 
 void F15::Update(float dt)
 {
-	SetTexture("Image/f15_2.png");
+	SetTexture("Image/F15/f15_2.png");
 	Move(dt, sf::Vector2i(-1, 0));
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
 		SetSpeed(400);
 		Move(dt, sf::Vector2i(-1, 0));
 		SetSpeed(300);
-		SetTexture("Image/f15_1.png");
+		SetTexture("Image/F15/f15_1.png");
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
 		SetSpeed(700);
 		Move(dt, sf::Vector2i(1, 0));
 		SetSpeed(300);
-		SetTexture("Image/f15_3.png");
+		SetTexture("Image/F15/f15_3.png");
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
 		Move(dt, sf::Vector2i(0, -1));

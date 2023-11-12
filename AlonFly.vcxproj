@@ -144,6 +144,9 @@
     <ClCompile Include="HealthComponent.cpp" />
     <ClCompile Include="Helicopter.cpp" />
     <ClCompile Include="HitBoxComponent.cpp" />
+    <ClCompile Include="Level.cpp" />
+    <ClCompile Include="Level1.cpp" />
+    <ClCompile Include="Level2.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainMenuState.cpp" />
     <ClCompile Include="Map.cpp" />
@@ -168,6 +171,9 @@
     <ClInclude Include="HealthComponent.h" />
     <ClInclude Include="Helicopter.h" />
     <ClInclude Include="HitBoxComponent.h" />
+    <ClInclude Include="Level.h" />
+    <ClInclude Include="Level1.h" />
+    <ClInclude Include="Level2.h" />
     <ClInclude Include="MainMenuState.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Map1.h" />
