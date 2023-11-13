@@ -37,6 +37,15 @@
     <Filter Include="Enitity\Type\Plane">
       <UniqueIdentifier>{706b8e3d-2108-4321-8b4c-998fd9503233}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Level">
+      <UniqueIdentifier>{06c7d368-b11d-4b42-88d7-06715c09d5c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Level\AnimScence">
+      <UniqueIdentifier>{8ff0a357-bff1-407b-aec6-3bef79deafe7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enitity\Projectile">
+      <UniqueIdentifier>{aaa18294-1367-47d8-a855-16609b6e1938}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -87,31 +96,52 @@
     <ClCompile Include="Mig29.cpp">
       <Filter>Enitity\Type\Plane</Filter>
     </ClCompile>
-    <ClCompile Include="Projectile.cpp">
-      <Filter>Enitity\Type\Plane</Filter>
-    </ClCompile>
     <ClCompile Include="Plane.cpp">
       <Filter>Enitity\Type</Filter>
     </ClCompile>
     <ClCompile Include="HealthComponent.cpp">
       <Filter>Component</Filter>
     </ClCompile>
-    <ClCompile Include="AnimScene.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AnimScene1.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AirportMap.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Level.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Level</Filter>
     </ClCompile>
     <ClCompile Include="Level1.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Level</Filter>
     </ClCompile>
     <ClCompile Include="Level2.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="AirportMap.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimScene.cpp">
+      <Filter>Level\AnimScence</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimScene1.cpp">
+      <Filter>Level\AnimScence</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimScene2.cpp">
+      <Filter>Level\AnimScence</Filter>
+    </ClCompile>
+    <ClCompile Include="Projectile.cpp">
+      <Filter>Enitity\Projectile</Filter>
+    </ClCompile>
+    <ClCompile Include="Explotion.cpp">
+      <Filter>Enitity\Projectile</Filter>
+    </ClCompile>
+    <ClCompile Include="ReloadSystem.cpp">
+      <Filter>Enitity\Projectile</Filter>
+    </ClCompile>
+    <ClCompile Include="Target.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Level3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Bomb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Map3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -161,31 +191,52 @@
     <ClInclude Include="Mig29.h">
       <Filter>Enitity\Type\Plane</Filter>
     </ClInclude>
-    <ClInclude Include="Projectile.h">
-      <Filter>Enitity\Type\Plane</Filter>
-    </ClInclude>
     <ClInclude Include="Plane.h">
       <Filter>Enitity\Type</Filter>
     </ClInclude>
     <ClInclude Include="HealthComponent.h">
       <Filter>Component</Filter>
     </ClInclude>
-    <ClInclude Include="AnimScene.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AnimScene1.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AirportMap.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Level.h">
-      <Filter>Header Files</Filter>
+      <Filter>Level</Filter>
     </ClInclude>
     <ClInclude Include="Level1.h">
-      <Filter>Header Files</Filter>
+      <Filter>Level</Filter>
     </ClInclude>
     <ClInclude Include="Level2.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="AirportMap.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimScene.h">
+      <Filter>Level\AnimScence</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimScene1.h">
+      <Filter>Level\AnimScence</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimScene2.h">
+      <Filter>Level\AnimScence</Filter>
+    </ClInclude>
+    <ClInclude Include="Projectile.h">
+      <Filter>Enitity\Projectile</Filter>
+    </ClInclude>
+    <ClInclude Include="Explotion.h">
+      <Filter>Enitity\Projectile</Filter>
+    </ClInclude>
+    <ClInclude Include="ReloadSystem.h">
+      <Filter>Enitity\Projectile</Filter>
+    </ClInclude>
+    <ClInclude Include="Target.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Level3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Bomb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Map3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

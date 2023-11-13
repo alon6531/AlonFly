@@ -45,7 +45,7 @@ void Entity::AddHitBoxComponent()
 
 void Entity::AddHealthComponent(int MaxHealth)
 {
-	healthComponent = new HealthComponent(MaxHealth);
+	healthComponent = new HealthComponent(sprite, MaxHealth);
 }
 
 bool Entity::IsCollide(const sf::FloatRect& Rect)
@@ -58,6 +58,9 @@ void Entity::Update(float dt)
 	if (hitBoxComponent) {
 		hitBoxComponent->Update();
 	}
+	if (healthComponent) {
+		healthComponent->Update(dt);
+	}
 
 }
 
@@ -67,6 +70,10 @@ void Entity::Render(sf::RenderWindow& window)
 
 	if (hitBoxComponent) {
 		hitBoxComponent->Render(window);
+	}
+
+	if (healthComponent) {
+		healthComponent->Render(window);
 	}
 
 }

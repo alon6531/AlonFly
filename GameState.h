@@ -2,6 +2,8 @@
 #include "State.h"
 #include "F15.h"
 #include "Level1.h"
+#include "Level2.h"
+#include "MainMenuState.h"
 
 class GameState :
     public State
@@ -13,8 +15,10 @@ private:
     Map* map;
     bool StartGame = false;
     std::stack<Level*> level;
-    std::stack<AnimScene*> animScene;
+    std::stack<AnimScene*>* animScene;
 
+    void StartAnimScene();
+    void StartScene();
 public:
     GameState();
 
@@ -22,6 +26,5 @@ public:
 
     void Render(sf::RenderWindow& window) override;
 
-    void StartScene();
 };
 

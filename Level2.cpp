@@ -1,5 +1,6 @@
 #include "Level2.h"
 
+
 Level2::Level2(F15& F15, Map* Map) : Level(F15, Map), f15(F15), map(Map)
 {
 	map = new Map1();
@@ -8,7 +9,7 @@ Level2::Level2(F15& F15, Map* Map) : Level(F15, Map), f15(F15), map(Map)
 
 	end = false;
 
-	F15.Sprite().setPosition(sf::Vector2f(800, 100));
+	F15.Sprite().setPosition(sf::Vector2f(900, 300));
 }
 
 void Level2::Update(float dt)
@@ -41,11 +42,11 @@ void Level2::Update(float dt)
 		}
 
 		//bomb of f15 hit mig
-		for (int j = 0; j < f15.GetBomb().size(); j++)
+		for (int j = 0; j < f15.GetRocket().size(); j++)
 		{
-			if (enemy.at(i)->IsCollide(f15.GetBomb()[j]->rect())) {
+			if (enemy.at(i)->IsCollide(f15.GetRocket()[j]->rect())) {
 				enemy[i]->OnHit(10);
-				f15.DeleteBomb(j);
+				f15.DeleteRocket(j);
 			}
 
 		}
@@ -78,5 +79,6 @@ bool Level2::IsEnd()
 
 void Level2::EndLevel(std::stack<Level*>& levels, std::stack<AnimScene*>* animScene)
 {
-	levels.push(new Level2(f15, map));
+	if (animScene)
+		levels.push(new Level3(f15, map));
 }

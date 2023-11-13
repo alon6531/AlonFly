@@ -1,5 +1,6 @@
 #pragma once
 #include "Level.h"
+#include "AnimScene2.h"
 class Level1 :
     public Level
 {

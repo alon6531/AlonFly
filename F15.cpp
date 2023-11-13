@@ -5,8 +5,8 @@ F15::F15(const sf::Vector2f& Pos) : Plane("Image/F15/f15_1.png", Pos, sf::Vector
 	AddHitBoxComponent();
 	AddMoveComponent(300);
 	CantExitScreen();
-	AddBullet(0.5f, true);
-	AddBomb(1, true, 0);
+	AddBullet(0.5f, true, 10, 3);
+	AddRocket(0.1f, true, 1, 5);
 	AddHealthComponent(25);
 
 }
@@ -45,7 +45,7 @@ void F15::Update(float dt)
 
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::E)){
-		ShootBomb("Image/rokcet.png", Sprite().getPosition() + sf::Vector2f(0, 20), sf::Vector2f(20, 20), 1500);
+		ShootRocket("Image/rokcet.png", Sprite().getPosition() + sf::Vector2f(0, 20), sf::Vector2f(20, 20), 1500);
 	}
 
 	Plane::Update(dt);

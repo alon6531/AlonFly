@@ -11,10 +11,10 @@ private:
 public:
     Projectile(const std::string& string, const sf::Vector2f& Pos, const sf::Vector2f& Scale, float Speed);
 
-    void Update(float dt, bool L_R);
+    virtual void Update(float dt, bool L_R);
 
-    const sf::FloatRect& rect();
+    virtual const sf::FloatRect& rect();
 
-    bool IsDead();
+    virtual bool IsDead();
 };
 

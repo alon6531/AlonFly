@@ -37,17 +37,19 @@ void Level1::Update(float dt)
 		{
 			if (enemy.at(i)->IsCollide(f15.GetBullet()[j]->rect())) {
 				enemy[i]->OnHit(1);
+				f15.AddExplotion(f15.GetBullet()[j]->Sprite().getPosition(), sf::Vector2f(0.2, 0.2));
 				f15.DeleteBullet(j);
 			}
 
 		}
 
 		//bomb of f15 hit mig
-		for (int j = 0; j < f15.GetBomb().size(); j++)
+		for (int j = 0; j < f15.GetRocket().size(); j++)
 		{
-			if (enemy.at(i)->IsCollide(f15.GetBomb()[j]->rect())) {
+			if (enemy.at(i)->IsCollide(f15.GetRocket()[j]->rect())) {
 				enemy[i]->OnHit(10);
-				f15.DeleteBomb(j);
+				f15.AddExplotion(f15.GetRocket()[j]->Sprite().getPosition(), sf::Vector2f(1, 1));
+				f15.DeleteRocket(j);
 			}
 
 		}
@@ -81,5 +83,7 @@ bool Level1::IsEnd()
 
 void Level1::EndLevel(std::stack<Level*>& levels, std::stack<AnimScene*>* animScene)
 {
-	levels.push(new Level2(f15, map));
+	if(animScene)
+		levels.push(new Level2(f15, map));
+	animScene->push(new AnimScene2());
 }

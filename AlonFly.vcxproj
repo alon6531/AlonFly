@@ -136,8 +136,11 @@
     <ClCompile Include="AirportMap.cpp" />
     <ClCompile Include="AnimScene1.cpp" />
     <ClCompile Include="AnimScene.cpp" />
+    <ClCompile Include="AnimScene2.cpp" />
+    <ClCompile Include="Bomb.cpp" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="Explotion.cpp" />
     <ClCompile Include="F15.cpp" />
     <ClCompile Include="GameEngine.cpp" />
     <ClCompile Include="GameState.cpp" />
@@ -147,15 +150,19 @@
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="Level1.cpp" />
     <ClCompile Include="Level2.cpp" />
+    <ClCompile Include="Level3.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainMenuState.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="Map1.cpp" />
+    <ClCompile Include="Map3.cpp" />
     <ClCompile Include="Mig29.cpp" />
     <ClCompile Include="MoveComponent.cpp" />
     <ClCompile Include="Plane.cpp" />
     <ClCompile Include="Projectile.cpp" />
+    <ClCompile Include="ReloadSystem.cpp" />
     <ClCompile Include="State.cpp" />
+    <ClCompile Include="Target.cpp" />
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="Timer.cpp" />
   </ItemGroup>
@@ -163,8 +170,11 @@
     <ClInclude Include="AirportMap.h" />
     <ClInclude Include="AnimScene1.h" />
     <ClInclude Include="AnimScene.h" />
+    <ClInclude Include="AnimScene2.h" />
+    <ClInclude Include="Bomb.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="Entity.h" />
+    <ClInclude Include="Explotion.h" />
     <ClInclude Include="F15.h" />
     <ClInclude Include="GameEngine.h" />
     <ClInclude Include="GameState.h" />
@@ -174,14 +184,18 @@
     <ClInclude Include="Level.h" />
     <ClInclude Include="Level1.h" />
     <ClInclude Include="Level2.h" />
+    <ClInclude Include="Level3.h" />
     <ClInclude Include="MainMenuState.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Map1.h" />
+    <ClInclude Include="Map3.h" />
     <ClInclude Include="Mig29.h" />
     <ClInclude Include="MoveComponent.h" />
     <ClInclude Include="Plane.h" />
     <ClInclude Include="Projectile.h" />
+    <ClInclude Include="ReloadSystem.h" />
     <ClInclude Include="State.h" />
+    <ClInclude Include="Target.h" />
     <ClInclude Include="Text.h" />
     <ClInclude Include="Timer.h" />
   </ItemGroup>

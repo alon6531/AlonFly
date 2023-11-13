@@ -5,7 +5,7 @@ Helicopter::Helicopter(const sf::Vector2f& Pos) : Plane("Image/Helicopter/1.png"
 	AddHitBoxComponent();
 	AddMoveComponent(100);
 	CantExitScreen();
-	AddBullet(0.3f, false);
+	AddBullet(0.5f, false);
 	//AddBomb(1, true, 0);
 	AddHealthComponent(25);
 	//Sprite().setRotation(-10);
@@ -19,7 +19,6 @@ Helicopter::Helicopter(const sf::Vector2f& Pos) : Plane("Image/Helicopter/1.png"
 void Helicopter::Update(float dt, sf::Sprite* TargetSprite)
 {
 
-	std::cout << animDelay->CurrentTime() << "\n";
 	if (animDelay->CurrentTime() <= 0.25 * animDelay->MaxTime()) {
 		SetTexture("Image/Helicopter/1.png");
 	}

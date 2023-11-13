@@ -1,16 +1,14 @@
 #pragma once
 #include "AnimScene.h"
 #include "AirportMap.h"
-#include "Timer.h"
-#include <math.h>
 
 
 class AnimScene1 :
     public AnimScene
 {
 private:
-    sf::Sprite sprite;
-    sf::Texture texture;
+    sf::Sprite f15;
+    sf::Texture f15Texture;
     bool moveForword;
     sf::Sprite boeing;
     sf::Texture boeingTexture;

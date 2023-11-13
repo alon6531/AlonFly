@@ -3,10 +3,10 @@
 
 AnimScene1::AnimScene1()
 {
-	texture.loadFromFile("Image/F15/f15Land1.png");
-	sprite.setTexture(texture);
-	sprite.setScale(1, 1);
-	sprite.setPosition(sf::Vector2f(0, 650));
+	f15Texture.loadFromFile("Image/F15/f15Land1.png");
+	f15.setTexture(f15Texture);
+	f15.setScale(1, 1);
+	f15.setPosition(sf::Vector2f(0, 650));
 
 	moveForword = true;
 	map = new AirportMap();
@@ -22,23 +22,22 @@ AnimScene1::AnimScene1()
 void AnimScene1::Update(float dt)
 {
 	if (moveForword) {
-		if (sprite.getPosition().x < 500)
-			sprite.move(dt * 300, 0);
+		if (f15.getPosition().x < 500)
+			f15.move(dt * 300, 0);
 		else
 		{
 			moveForword = false;
 			takeOf->Reset();
-			texture.loadFromFile("Image/F15/f15Land2.png");
-			sprite.setTexture(texture);
+			f15Texture.loadFromFile("Image/F15/f15Land2.png");
+			f15.setTexture(f15Texture);
 		}
 	}
 	else {
 		if (!takeOf->IsEnd()) {
-			std::cout << sprite.getRotation() << "\n";
-			if (sprite.getRotation() > 340 || sprite.getRotation() == 0)
-				sprite.rotate(-0.02);
+			if (f15.getRotation() > 340 || f15.getRotation() == 0)
+				f15.rotate(-0.02);
 
-			sprite.move(dt * 200, -2 * dt * 100);
+			f15.move(dt * 200, -2 * dt * 100);
 
 		}
 		else
@@ -59,7 +58,7 @@ void AnimScene1::Render(sf::RenderWindow& Window)
 
 	Window.draw(boeing);
 
-	Window.draw(sprite);
+	Window.draw(f15);
 
 
 }

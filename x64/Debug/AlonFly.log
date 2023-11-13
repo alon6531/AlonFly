@@ -1,2 +1,5 @@
 ﻿  GameState.cpp
+  Level3.cpp
+E:\programming projects\AlonFly\AlonFly\Level3.cpp(8,31): warning C4305: 'argument': truncation from 'double' to 'float'
+  Generating Code...
   AlonFly.vcxproj -> E:\programming projects\AlonFly\x64\Debug\AlonFly.exe

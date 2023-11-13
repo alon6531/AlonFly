@@ -18,5 +18,7 @@ public:
 	void Render(sf::RenderWindow& window);
 
 	void setString(const std::string& Str);
+
+	sf::Text& GetText();
 };
 

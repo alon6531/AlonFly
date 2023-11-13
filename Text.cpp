@@ -34,3 +34,10 @@ void Text::setString(const std::string& Str)
 	text.setString(Str);
 }
 
+sf::Text& Text::GetText()
+{
+	return text;
+}
+
+
+

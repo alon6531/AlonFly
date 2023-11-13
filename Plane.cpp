@@ -4,8 +4,9 @@ Plane::Plane(const std::string& string, const sf::Vector2f& Pos, const sf::Vecto
 {
 	bullet = NULL;
 	bulletDelay = NULL;
-	bomb = NULL;
-	bombDelay = NULL;
+	Rocket = NULL;
+	RocketDelay = NULL;
+
 }
 
 void Plane::Update(float dt, sf::Sprite* TargetSprite)
@@ -20,14 +21,39 @@ void Plane::Update(float dt, sf::Sprite* TargetSprite)
 		bulletDelay->Update(dt);
 	}
 
+	if (Rocket) {
+		for (int i = 0; i < Rocket->size(); i++) {
+			Rocket->at(i)->Update(dt, shootBulletL_R);
+
+			if (Rocket->at(i)->IsDead())
+				DeleteRocket(i);
+		}
+		RocketDelay->Update(dt);
+	}
+
 	if (bomb) {
 		for (int i = 0; i < bomb->size(); i++) {
-			bomb->at(i)->Update(dt, shootBulletL_R);
+			bomb->at(i)->Update(dt, shootBombL_R);
 
 			if (bomb->at(i)->IsDead())
 				DeleteBomb(i);
 		}
-		bombDelay->Update(dt);
+		BombDelay->Update(dt);
+	}
+
+	if(bulletReloadSystem)
+		bulletReloadSystem->Update(dt);
+
+	if (RocketReloadSystem)
+		RocketReloadSystem->Update(dt);
+
+	if (BombReloadSystem)
+		BombReloadSystem->Update(dt);
+
+	for (int i = 0; i < explotion.size(); i++) {
+		explotion[i]->Update(dt);
+		if (explotion[i]->IsEnd())
+			explotion.erase(explotion.begin() + i);
 	}
 
 	Entity::Update(dt);
@@ -43,6 +69,15 @@ void Plane::Render(sf::RenderWindow& Window)
 		
 	}
 
+	if (Rocket) {
+		for (int i = 0; i < Rocket->size(); i++) {
+			Rocket->at(i)->Render(Window);
+
+			if (Rocket->at(i)->IsDead())
+				Rocket->erase(Rocket->begin() + i);
+		}
+	}
+
 	if (bomb) {
 		for (int i = 0; i < bomb->size(); i++) {
 			bomb->at(i)->Render(Window);
@@ -52,42 +87,97 @@ void Plane::Render(sf::RenderWindow& Window)
 		}
 	}
 
+	if (bulletReloadSystem)
+		bulletReloadSystem->Render(Window);
+
+	if (RocketReloadSystem)
+		RocketReloadSystem->Render(Window);
+
+	if (BombReloadSystem)
+		BombReloadSystem->Render(Window);
+
+	for (int i = 0; i < explotion.size(); i++) {
+		explotion[i]->Render(Window);
+	}
+
 	Entity::Render(Window);
 }
 
-void Plane::AddBullet(float FireRate, bool L_R, float StartRate)
+void Plane::AddBullet(float FireRate, bool L_R, int Magazine, float ReloadTIme, float StartRate)
 {
+	bulletReloadSystem = new ReloadSystem(Magazine, ReloadTIme, sf::Vector2f(50, 650));
 	bullet = new std::vector<Projectile*>();
 	shootBulletL_R = L_R;
 	bulletDelay = new Timer(FireRate, StartRate);
 }
 
-void Plane::AddBomb(float FireRate, bool L_R, float StartRate)
+void Plane::AddRocket(float FireRate, bool L_R, int Magazine, float ReloadTIme, float StartRate)
 {
-	bomb = new std::vector<Projectile*>();
-	shootBmobL_R = L_R;
-	bombDelay = new Timer(FireRate, StartRate);
+	RocketReloadSystem = new ReloadSystem(Magazine, ReloadTIme, sf::Vector2f(150, 650));
+	Rocket = new std::vector<Projectile*>();
+	shootRocketL_R = L_R;
+	RocketDelay = new Timer(FireRate, StartRate);
 }
 
-void Plane::ShootBullet(const std::string& string, const sf::Vector2f& Pos, const sf::Vector2f& Scale, float Speed)
+void Plane::AddBomb(float FireRate, bool L_R, int Magazine, float ReloadTIme, float StartRate)
 {
-	if (bulletDelay->IsEnd()) {
-		bullet->push_back(new Projectile(string, Pos, Scale, Speed));
-		bulletDelay->Reset();
+	BombReloadSystem = new ReloadSystem(Magazine, ReloadTIme, sf::Vector2f(250, 650));
+	bomb = new std::vector<Projectile*>();
+	shootBombL_R = L_R;
+	BombDelay = new Timer(FireRate, StartRate);
+}
+
+
+void Plane::ShootBullet(const std::string& string, const sf::Vector2f& Pos, const sf::Vector2f& Scale, float Speed, float dt)
+{
+	if (bullet)
+	{
+		if (bulletDelay->IsEnd()) {
+			if (bulletReloadSystem->IsCanShoot()) {
+				bullet->push_back(new Projectile(string, Pos, Scale, Speed));
+				bulletDelay->Reset();
+
+				bulletReloadSystem->Shoot();
+			}
+
+		}
 	}
 }
 
-void Plane::ShootBomb(const std::string& string, const sf::Vector2f& Pos, const sf::Vector2f& Scale, float Speed)
+void Plane::ShootRocket(const std::string& string, const sf::Vector2f& Pos, const sf::Vector2f& Scale, float Speed)
 {
-	if (bombDelay->IsEnd()) {
-		bomb->push_back(new Projectile(string, Pos, Scale, Speed));
-		bombDelay->Reset();
+	if (RocketDelay->IsEnd()) {
+		if (RocketReloadSystem->IsCanShoot())
+		{
+			Rocket->push_back(new Projectile(string, Pos, Scale, Speed));
+			RocketDelay->Reset();
+
+			RocketReloadSystem->Shoot();
+		}
+	}
+}
+
+void Plane::ShootBomb(const std::string& string, const sf::Vector2f& Pos, const sf::Vector2f& Scale, float Speed, float dt)
+{
+	if (BombDelay->IsEnd()) {
+		if (BombReloadSystem->IsCanShoot())
+		{
+			bomb->push_back(new Bomb(string, Pos, Scale, Speed));
+			BombDelay->Reset();
+
+			BombReloadSystem->Shoot();
+		}
 	}
 }
 
 std::vector<Projectile*>& Plane::GetBullet()
 {
 	return *bullet;
+}
+
+std::vector<Projectile*>& Plane::GetRocket()
+{
+	return *Rocket;
 }
 
 std::vector<Projectile*>& Plane::GetBomb()
@@ -104,6 +194,15 @@ void Plane::DeleteBullet(int i)
 	}
 }
 
+void Plane::DeleteRocket(int i)
+{
+	if (Rocket) {
+		if (Rocket->at(i)) {
+			Rocket->erase(Rocket->begin() + i);
+		}
+	}
+}
+
 void Plane::DeleteBomb(int i)
 {
 	if (bomb) {
@@ -111,4 +210,9 @@ void Plane::DeleteBomb(int i)
 			bomb->erase(bomb->begin() + i);
 		}
 	}
+}
+
+void Plane::AddExplotion(const sf::Vector2f& PosS, const sf::Vector2f& Scale)
+{
+	explotion.push_back(new Explotion(PosS, Scale));
 }

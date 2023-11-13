@@ -1,6 +1,8 @@
 #pragma once
 #include "SFML/Graphics.hpp"
 #include <iostream>
+#include "Timer.h"
+#include <math.h>
 
 class AnimScene
 {
