@@ -7,7 +7,7 @@ Helicopter::Helicopter(const sf::Vector2f& Pos) : Plane("Image/Helicopter/1.png"
 	CantExitScreen();
 	AddBullet(0.5f, false);
 	//AddBomb(1, true, 0);
-	AddHealthComponent(25);
+	AddHealthComponent(15);
 	//Sprite().setRotation(-10);
 
 	animDelay = new Timer(0.3);
