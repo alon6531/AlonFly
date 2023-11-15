@@ -205,11 +205,20 @@
     <ClInclude Include="Plane.h" />
     <ClInclude Include="Projectile.h" />
     <ClInclude Include="ReloadSystem.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="Target.h" />
     <ClInclude Include="Text.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="VictoryScreenState.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AlonFly.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon1.ico" />
+    <Image Include="icon\icon.ico" />
+    <Image Include="icon\icon.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
