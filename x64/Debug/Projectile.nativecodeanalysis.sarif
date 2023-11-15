@@ -26,7 +26,7 @@
             "analysisTarget"
           ],
           "hashes": {
-            "sha-256": "e90f430c3d3458bcd4a769e588bebbd5d11a3e72075930cfa6c3217eeebe5aef"
+            "sha-256": "1797533b50bd98c663d2d231c68962efa84e81cc1e148218a2218aa4130eee5a"
           }
         },
         {
@@ -34,7 +34,7 @@
             "uri": "file:///e:/programming projects/alonfly/alonfly/projectile.h"
           },
           "hashes": {
-            "sha-256": "3b0a827cc552d1756fc579925d5f9d86840c9e9167534bc0243d00b49aee6c38"
+            "sha-256": "e48b64e74d4fc1cdba72793ddd4c591cd5eeb15d00c75f859f0789444c4ce584"
           }
         },
         {
@@ -42,7 +42,7 @@
             "uri": "file:///e:/programming projects/alonfly/alonfly/entity.h"
           },
           "hashes": {
-            "sha-256": "0f9212618e4e13b0827bf260233c3ba3e9542aef3331143f9af0a09ae5868008"
+            "sha-256": "f616df07cffea38ff5c616b7f2d63e8df5019576578f2e05c5d925f5a7c86881"
           }
         },
         {
@@ -50,7 +50,7 @@
             "uri": "file:///e:/programming projects/alonfly/alonfly/movecomponent.h"
           },
           "hashes": {
-            "sha-256": "eb5d83573c06f8e9d810d9da7aace1f9bcd864080cd9b70096ba2ca223971043"
+            "sha-256": "9230ecb4b679e2c8eaffa578e289943a4a81fac30563940b903311134eef3235"
           }
         },
         {
@@ -655,10 +655,18 @@
         },
         {
           "location": {
-            "uri": "file:///e:/programming projects/alonfly/alonfly/gasscomponent.h"
+            "uri": "file:///e:/programming projects/alonfly/alonfly/healthcomponent.h"
           },
           "hashes": {
-            "sha-256": "b348018bb8559b80e0911ac9ff00eb44e337cd4ce81b2c28b9f43d8746623181"
+            "sha-256": "0b27b729f7931fdd11ad42c9bbe5e73f50aa73d143d2845b9a360e930e659d31"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/programming projects/alonfly/alonfly/text.h"
+          },
+          "hashes": {
+            "sha-256": "d38e41e7c96332d7d551adbca91297609fdd304055211790187dc2813cbdb005"
           }
         },
         {
@@ -666,7 +674,7 @@
             "uri": "file:///e:/programming projects/alonfly/alonfly/timer.h"
           },
           "hashes": {
-            "sha-256": "871345899d24b0b8a3aff4446830825bf428b49e92f5166e460d2f36b39d954d"
+            "sha-256": "ee506b37ad5a02c8637843c8013a02c99d07a6dd16f2aa21e2abb6a29f7ba07a"
           }
         }
       ]

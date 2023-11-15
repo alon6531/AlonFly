@@ -10,6 +10,7 @@ private:
 	std::vector<Plane*> enemy;
 	Map* map;
 	bool end;
+	Text* task;
 
 public:
 	Level1(F15& F15, Map* Map);

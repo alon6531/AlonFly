@@ -5,11 +5,18 @@ Level4::Level4(F15& F15, Map* Map) : Level(F15, Map), map(Map), f15(F15)
 	map = new AirportMap();
 	end = false;
 
+	f15.Sprite().setPosition(sf::Vector2f(300, 0));
+	f15.RemoveBomb();
+
 	target = new Target("Image/blank.png", sf::Vector2f(700, 500), sf::Vector2f(2500, 1000));
+
+
+	task = new Text("*Land you F15", sf::Vector2f(1100, 20), sf::Vector2f(1, 1), sf::Color::Black);
 }
 
 void Level4::Update(float dt)
 {
+
 	if (map)
 		map->Update(dt);
 
@@ -33,6 +40,8 @@ void Level4::Render(sf::RenderWindow& Window)
 		target->Render(Window);
 
 	f15.Render(Window);
+
+	task->Render(Window);
 }
 
 bool Level4::IsEnd()
@@ -42,4 +51,6 @@ bool Level4::IsEnd()
 
 void Level4::EndLevel(std::stack<Level*>& levels, std::stack<AnimScene*>* animScene)
 {
+	animScene->push(new AnimScene5());
+	bDone = true;
 }

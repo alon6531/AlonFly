@@ -658,7 +658,7 @@
             "uri": "file:///e:/programming projects/alonfly/alonfly/text.h"
           },
           "hashes": {
-            "sha-256": "1802a82793e88e48503afa54d045caee94fa7daca7b2340de573c4f3495eff66"
+            "sha-256": "d38e41e7c96332d7d551adbca91297609fdd304055211790187dc2813cbdb005"
           }
         },
         {
@@ -666,7 +666,7 @@
             "uri": "file:///e:/programming projects/alonfly/alonfly/gamestate.h"
           },
           "hashes": {
-            "sha-256": "daeaac28912b487c19cd9e24224f221e48a06683789ce1e26d252b2bb6b0fb94"
+            "sha-256": "e33439075c60f6712009a25016301230f7e164a7e9d89b50ea5dcb6658a8a767"
           }
         },
         {
@@ -674,7 +674,15 @@
             "uri": "file:///e:/programming projects/alonfly/alonfly/f15.h"
           },
           "hashes": {
-            "sha-256": "9062c6bb1cafd8eaba70ad672eec5e6cb7a968c231e7eab588e96e1178228530"
+            "sha-256": "ed666990bfb0701bec8bd279cd6eb66450ca9152cd891cfd2a2cff0f48f68ace"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/programming projects/alonfly/alonfly/plane.h"
+          },
+          "hashes": {
+            "sha-256": "c463518c5a7b038671c1c210682cdf75336e9db3dbbd6cc2a6fe66ca2cca6cdc"
           }
         },
         {
@@ -682,7 +690,7 @@
             "uri": "file:///e:/programming projects/alonfly/alonfly/entity.h"
           },
           "hashes": {
-            "sha-256": "0f9212618e4e13b0827bf260233c3ba3e9542aef3331143f9af0a09ae5868008"
+            "sha-256": "f616df07cffea38ff5c616b7f2d63e8df5019576578f2e05c5d925f5a7c86881"
           }
         },
         {
@@ -690,7 +698,7 @@
             "uri": "file:///e:/programming projects/alonfly/alonfly/movecomponent.h"
           },
           "hashes": {
-            "sha-256": "eb5d83573c06f8e9d810d9da7aace1f9bcd864080cd9b70096ba2ca223971043"
+            "sha-256": "9230ecb4b679e2c8eaffa578e289943a4a81fac30563940b903311134eef3235"
           }
         },
         {
@@ -703,10 +711,10 @@
         },
         {
           "location": {
-            "uri": "file:///e:/programming projects/alonfly/alonfly/gasscomponent.h"
+            "uri": "file:///e:/programming projects/alonfly/alonfly/healthcomponent.h"
           },
           "hashes": {
-            "sha-256": "b348018bb8559b80e0911ac9ff00eb44e337cd4ce81b2c28b9f43d8746623181"
+            "sha-256": "0b27b729f7931fdd11ad42c9bbe5e73f50aa73d143d2845b9a360e930e659d31"
           }
         },
         {
@@ -714,7 +722,7 @@
             "uri": "file:///e:/programming projects/alonfly/alonfly/timer.h"
           },
           "hashes": {
-            "sha-256": "871345899d24b0b8a3aff4446830825bf428b49e92f5166e460d2f36b39d954d"
+            "sha-256": "ee506b37ad5a02c8637843c8013a02c99d07a6dd16f2aa21e2abb6a29f7ba07a"
           }
         },
         {
@@ -722,7 +730,151 @@
             "uri": "file:///e:/programming projects/alonfly/alonfly/projectile.h"
           },
           "hashes": {
-            "sha-256": "3b0a827cc552d1756fc579925d5f9d86840c9e9167534bc0243d00b49aee6c38"
+            "sha-256": "e48b64e74d4fc1cdba72793ddd4c591cd5eeb15d00c75f859f0789444c4ce584"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/programming projects/alonfly/alonfly/reloadsystem.h"
+          },
+          "hashes": {
+            "sha-256": "e642e95b3aca5785e2bee7d760c82862be3a53881dab4712c3dd53e58453e0a0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/programming projects/alonfly/alonfly/explotion.h"
+          },
+          "hashes": {
+            "sha-256": "de029b9351c3a9ae9cb24833a937b96d91d9a0edcc34f8d4d8a1c328ae907624"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/programming projects/alonfly/alonfly/bomb.h"
+          },
+          "hashes": {
+            "sha-256": "a145228a264b7aff9f2c313fc7d1f64039a7be8a7307155cb86c70b6a7ca2b57"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/programming projects/alonfly/alonfly/level1.h"
+          },
+          "hashes": {
+            "sha-256": "6c831a31a02be251533295febc6037a73a95771c79a799f8a8a9719125f0109a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/programming projects/alonfly/alonfly/level.h"
+          },
+          "hashes": {
+            "sha-256": "7099fddfea8eff54cf729672b1839ef7d58ab5f3562b4de26b08d3bea02ada64"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/programming projects/alonfly/alonfly/map1.h"
+          },
+          "hashes": {
+            "sha-256": "6860322d71f6650c949fba661c7ae5f8afe92851670a6e138a48a99c478c21ee"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/programming projects/alonfly/alonfly/map.h"
+          },
+          "hashes": {
+            "sha-256": "05422e2cee579a5ab64ca3df59f5d2dd7cd64abe89d20ab3e073047c09abd7ea"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/programming projects/alonfly/alonfly/mig29.h"
+          },
+          "hashes": {
+            "sha-256": "35061fe3178459cdbd3b554d93cc147e4c9c7a996a255eae3ef2d42d40b2ba28"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/programming projects/alonfly/alonfly/helicopter.h"
+          },
+          "hashes": {
+            "sha-256": "c95384e9a38c8dd2b0e26327c5bf70f0d98504baa82b97a6cdcd874682a75c32"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/programming projects/alonfly/alonfly/animscene1.h"
+          },
+          "hashes": {
+            "sha-256": "286a7757d6d0e0caae27097f21339ce673de0110bb55e19cadadf288282d761c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/programming projects/alonfly/alonfly/animscene.h"
+          },
+          "hashes": {
+            "sha-256": "6d44969fbba88eb19f50cf8da4dd1ae3d390f4dd5b93101e1a8318718861638f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/programming projects/alonfly/alonfly/airportmap.h"
+          },
+          "hashes": {
+            "sha-256": "aed89151fc2f798e53aa7a44681a2572a4cc5a4832c6875867b9aee4201eadf2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/programming projects/alonfly/alonfly/animscene2.h"
+          },
+          "hashes": {
+            "sha-256": "0fc15dbff68935cbe80cf9b56fef0d2e0d29979e8c254cb6908b0a628512b8cc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/programming projects/alonfly/alonfly/level2.h"
+          },
+          "hashes": {
+            "sha-256": "887968f9baa088c0a8e27dbb568a6e4e776ef3de9fb17b8f7006956476eaca30"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/programming projects/alonfly/alonfly/level3.h"
+          },
+          "hashes": {
+            "sha-256": "0d35d294615e3604ae78a4c3467a7452b1a542fe73946f9755518d82e6131bb2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/programming projects/alonfly/alonfly/target.h"
+          },
+          "hashes": {
+            "sha-256": "ae54dd82e4d739f9c6f000de240d4d87a7690c884bbc5ea9a0899daca9003ca1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/programming projects/alonfly/alonfly/map3.h"
+          },
+          "hashes": {
+            "sha-256": "53965473e047b2791e89b2d5d7d3f3b4b809920d8811c3cd753a7c4200f8c13e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/programming projects/alonfly/alonfly/level4.h"
+          },
+          "hashes": {
+            "sha-256": "4cdb4d9d6d828b57b4e017312199bd4d70f75c4e20095bb3b2b7af2a1e0a672b"
           }
         }
       ]

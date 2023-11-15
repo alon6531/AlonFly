@@ -69,7 +69,7 @@ void Entity::Render(sf::RenderWindow& window)
 	window.draw(sprite);
 
 	if (hitBoxComponent) {
-		hitBoxComponent->Render(window);
+		//hitBoxComponent->Render(window);
 	}
 
 	if (healthComponent) {

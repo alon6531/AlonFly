@@ -22,6 +22,9 @@ Text::Text(const std::string& Str, const sf::Vector2f& Pos, const sf::Vector2f& 
 	text.setFillColor(Color);
 	font.loadFromFile(FontPath);
 	text.setFont(font);
+	text.setOutlineThickness(0.5);
+	text.setOutlineColor(sf::Color::Cyan);
+
 }
 
 void Text::Render(sf::RenderWindow& window)

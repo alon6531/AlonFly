@@ -7,7 +7,7 @@
         {
           "ruleId": "C26495",
           "message": {
-            "text": "Variable 'Entity::gassComponent' is uninitialized. Always initialize a member variable (type.6)."
+            "text": "Variable 'Entity::healthComponent' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
             {
@@ -32,13 +32,13 @@
             }
           ],
           "properties": {
-            "targetSymbol": "Entity::gassComponent"
+            "targetSymbol": "Entity::healthComponent"
           }
         },
         {
           "ruleId": "C26495",
           "message": {
-            "text": "Variable 'Entity::gassComponent' is uninitialized. Always initialize a member variable (type.6)."
+            "text": "Variable 'Entity::healthComponent' is uninitialized. Always initialize a member variable (type.6)."
           },
           "locations": [
             {
@@ -63,7 +63,7 @@
             }
           ],
           "properties": {
-            "targetSymbol": "Entity::gassComponent"
+            "targetSymbol": "Entity::healthComponent"
           }
         }
       ],
@@ -90,7 +90,7 @@
             "resultFile"
           ],
           "hashes": {
-            "sha-256": "54be935eb3892517c9871f6826f9f8456e66514999eac9fc28e96f149158c91d"
+            "sha-256": "9b0c55b6c80f83d4001edc04a769393e0b2b21a15478dfee26363c2c6cb1edcb"
           }
         },
         {
@@ -98,7 +98,7 @@
             "uri": "file:///e:/programming projects/alonfly/alonfly/entity.h"
           },
           "hashes": {
-            "sha-256": "0f9212618e4e13b0827bf260233c3ba3e9542aef3331143f9af0a09ae5868008"
+            "sha-256": "f616df07cffea38ff5c616b7f2d63e8df5019576578f2e05c5d925f5a7c86881"
           }
         },
         {
@@ -106,7 +106,7 @@
             "uri": "file:///e:/programming projects/alonfly/alonfly/movecomponent.h"
           },
           "hashes": {
-            "sha-256": "eb5d83573c06f8e9d810d9da7aace1f9bcd864080cd9b70096ba2ca223971043"
+            "sha-256": "9230ecb4b679e2c8eaffa578e289943a4a81fac30563940b903311134eef3235"
           }
         },
         {
@@ -711,10 +711,18 @@
         },
         {
           "location": {
-            "uri": "file:///e:/programming projects/alonfly/alonfly/gasscomponent.h"
+            "uri": "file:///e:/programming projects/alonfly/alonfly/healthcomponent.h"
           },
           "hashes": {
-            "sha-256": "b348018bb8559b80e0911ac9ff00eb44e337cd4ce81b2c28b9f43d8746623181"
+            "sha-256": "0b27b729f7931fdd11ad42c9bbe5e73f50aa73d143d2845b9a360e930e659d31"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/programming projects/alonfly/alonfly/text.h"
+          },
+          "hashes": {
+            "sha-256": "d38e41e7c96332d7d551adbca91297609fdd304055211790187dc2813cbdb005"
           }
         },
         {
@@ -722,7 +730,7 @@
             "uri": "file:///e:/programming projects/alonfly/alonfly/timer.h"
           },
           "hashes": {
-            "sha-256": "871345899d24b0b8a3aff4446830825bf428b49e92f5166e460d2f36b39d954d"
+            "sha-256": "ee506b37ad5a02c8637843c8013a02c99d07a6dd16f2aa21e2abb6a29f7ba07a"
           }
         }
       ]

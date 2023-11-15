@@ -1,6 +1,7 @@
 #pragma once
 #include "Level.h"
 #include "Level3.h"
+#include "AnimScene3.h"
 
 class Level2 :
     public Level
@@ -10,6 +11,7 @@ private:
 	std::vector<Plane*> enemy;
 	Map* map;
 	bool end;
+	Text* task;
 
 public:
 	Level2(F15& F15, Map* Map);

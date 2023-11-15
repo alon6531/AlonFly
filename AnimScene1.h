@@ -14,8 +14,10 @@ private:
     sf::Texture boeingTexture;
     Map* map;
     bool end;
-
     Timer* takeOf;
+
+    sf::Sound sound;
+    sf::SoundBuffer buffer;
 public:
     AnimScene1();
 

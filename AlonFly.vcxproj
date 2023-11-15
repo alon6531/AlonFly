@@ -110,7 +110,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;sfml-system-d.lib;sfml-window-d.lib;sfml-graphics-d.lib;sfml-main-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;sfml-system-d.lib;sfml-window-d.lib;sfml-graphics-d.lib;sfml-audio-d.lib;sfml-main-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -137,8 +137,12 @@
     <ClCompile Include="AnimScene1.cpp" />
     <ClCompile Include="AnimScene.cpp" />
     <ClCompile Include="AnimScene2.cpp" />
+    <ClCompile Include="AnimScene3.cpp" />
+    <ClCompile Include="AnimScene4.cpp" />
+    <ClCompile Include="AnimScene5.cpp" />
     <ClCompile Include="Bomb.cpp" />
     <ClCompile Include="Button.cpp" />
+    <ClCompile Include="DieScreenState.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Explotion.cpp" />
     <ClCompile Include="F15.cpp" />
@@ -166,14 +170,19 @@
     <ClCompile Include="Target.cpp" />
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="VictoryScreenState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AirportMap.h" />
     <ClInclude Include="AnimScene1.h" />
     <ClInclude Include="AnimScene.h" />
     <ClInclude Include="AnimScene2.h" />
+    <ClInclude Include="AnimScene3.h" />
+    <ClInclude Include="AnimScene4.h" />
+    <ClInclude Include="AnimScene5.h" />
     <ClInclude Include="Bomb.h" />
     <ClInclude Include="Button.h" />
+    <ClInclude Include="DieScreenState.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="Explotion.h" />
     <ClInclude Include="F15.h" />
@@ -200,6 +209,7 @@
     <ClInclude Include="Target.h" />
     <ClInclude Include="Text.h" />
     <ClInclude Include="Timer.h" />
+    <ClInclude Include="VictoryScreenState.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

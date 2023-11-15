@@ -4,7 +4,7 @@ HealthComponent::HealthComponent(sf::Sprite& Sprite, int MaxHealth) : sprite(Spr
 {
 	maxHealth = MaxHealth;
 	currentHealth = maxHealth;
-
+	srand(time(0));
 	healthBarFrame.setFillColor(sf::Color::Transparent);
 	healthBarFrame.setSize(sf::Vector2f(sprite.getGlobalBounds().width / 2, sprite.getGlobalBounds().height * 0.20));
 	healthBarFrame.setPosition(sf::Vector2f(sprite.getPosition().x, sprite.getPosition().y - healthBarFrame.getSize().y));
@@ -55,8 +55,10 @@ void HealthComponent::Render(sf::RenderWindow& Window)
 void HealthComponent::OnHit(int Damage)
 {
 	currentHealth -= Damage;
-	if (Damage <= 5)
+	if (Damage == 1 || Damage == 2)
 		damageText.push_back(new Text("-" + std::to_string(Damage), sprite.getPosition(), sf::Vector2f(1.5, 1.5), sf::Color::Red));
+	else if (Damage >= 3 && Damage <= 5)
+		damageText.push_back(new Text("-" + std::to_string(Damage), sprite.getPosition(), sf::Vector2f(1.5, 1.5), sf::Color::Magenta));
 	else if(Damage <= 10 && Damage > 5)
 		damageText.push_back(new Text("-" + std::to_string(Damage), sprite.getPosition(), sf::Vector2f(2.5, 2.5), sf::Color(255, 165, 0)));
 }

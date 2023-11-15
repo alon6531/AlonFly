@@ -109,6 +109,13 @@ void Plane::AddBullet(float FireRate, bool L_R, int Magazine, float ReloadTIme, 
 	bullet = new std::vector<Projectile*>();
 	shootBulletL_R = L_R;
 	bulletDelay = new Timer(FireRate, StartRate);
+	
+}
+
+void Plane::RemoveBullet()
+{
+	if (bullet)
+		bullet = NULL;
 }
 
 void Plane::AddRocket(float FireRate, bool L_R, int Magazine, float ReloadTIme, float StartRate)
@@ -119,6 +126,12 @@ void Plane::AddRocket(float FireRate, bool L_R, int Magazine, float ReloadTIme, 
 	RocketDelay = new Timer(FireRate, StartRate);
 }
 
+void Plane::RemoveRokcet()
+{
+	if (Rocket)
+		Rocket = NULL;
+}
+
 void Plane::AddBomb(float FireRate, bool L_R, int Magazine, float ReloadTIme, float StartRate)
 {
 	BombReloadSystem = new ReloadSystem(Magazine, ReloadTIme, sf::Vector2f(250, 650));
@@ -127,6 +140,11 @@ void Plane::AddBomb(float FireRate, bool L_R, int Magazine, float ReloadTIme, fl
 	BombDelay = new Timer(FireRate, StartRate);
 }
 
+void Plane::RemoveBomb()
+{
+	if (bomb)
+		bomb = NULL;
+}
 
 void Plane::ShootBullet(const std::string& string, const sf::Vector2f& Pos, const sf::Vector2f& Scale, float Speed, float dt)
 {
@@ -136,7 +154,9 @@ void Plane::ShootBullet(const std::string& string, const sf::Vector2f& Pos, cons
 			if (bulletReloadSystem->IsCanShoot()) {
 				bullet->push_back(new Projectile(string, Pos, Scale, Speed));
 				bulletDelay->Reset();
-
+				bulletSound.push_back(new sf::Music());
+				bulletSound.at(bulletSound.size() - 1)->openFromFile("Sound/bullet.wav");
+				bulletSound.at(bulletSound.size() - 1)->play();
 				bulletReloadSystem->Shoot();
 			}
 
@@ -151,7 +171,9 @@ void Plane::ShootRocket(const std::string& string, const sf::Vector2f& Pos, cons
 		{
 			Rocket->push_back(new Projectile(string, Pos, Scale, Speed));
 			RocketDelay->Reset();
-
+			rocketSound.push_back(new sf::Music());
+			rocketSound.at(rocketSound.size() - 1)->openFromFile("Sound/rocket.wav");
+			rocketSound.at(rocketSound.size() - 1)->play();
 			RocketReloadSystem->Shoot();
 		}
 	}
@@ -164,7 +186,9 @@ void Plane::ShootBomb(const std::string& string, const sf::Vector2f& Pos, const 
 		{
 			bomb->push_back(new Bomb(string, Pos, Scale, Speed));
 			BombDelay->Reset();
-
+			bombSound.push_back(new sf::Music());
+			bombSound.at(bombSound.size() - 1)->openFromFile("Sound/bomb.wav");
+			bombSound.at(bombSound.size() - 1)->play();
 			BombReloadSystem->Shoot();
 		}
 	}

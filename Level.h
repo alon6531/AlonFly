@@ -9,7 +9,7 @@
 #include "Mig29.h"
 #include "Helicopter.h"
 #include "AnimScene1.h"
-
+#include "Text.h"
 
 class Level
 {
@@ -17,6 +17,8 @@ private:
 
 
 public:
+	bool bDone;
+
 	Level(F15& F15, Map* Map);
 
 	virtual void Update(float dt) = 0;

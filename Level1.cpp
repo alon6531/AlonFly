@@ -11,10 +11,15 @@ Level1::Level1(F15& F15, Map* Map) : Level(F15, Map), f15(F15), map(Map)
 	end = false;
 
 	F15.Sprite().setPosition(sf::Vector2f(800, 100));
+
+
+	task = new Text("*kill those Iraq helicopters", sf::Vector2f(1000, 20), sf::Vector2f(1, 1), sf::Color::Black);
 }
 
 void Level1::Update(float dt)
 {
+
+
 	map->Update(dt);
 
 	f15.Update(dt);
@@ -74,6 +79,8 @@ void Level1::Render(sf::RenderWindow& Window)
 	for (int i = 0; i < enemy.size(); i++) {
 		enemy[i]->Render(Window);
 	}
+
+	task->Render(Window);
 }
 
 bool Level1::IsEnd()

@@ -132,20 +132,35 @@
     <ClCompile Include="ReloadSystem.cpp">
       <Filter>Enitity\Projectile</Filter>
     </ClCompile>
-    <ClCompile Include="Target.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Level3.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Bomb.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Map3.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Level</Filter>
     </ClCompile>
     <ClCompile Include="Level4.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimScene5.cpp">
+      <Filter>Level\AnimScence</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimScene3.cpp">
+      <Filter>Level\AnimScence</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimScene4.cpp">
+      <Filter>Level\AnimScence</Filter>
+    </ClCompile>
+    <ClCompile Include="Map3.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Bomb.cpp">
+      <Filter>Enitity\Projectile</Filter>
+    </ClCompile>
+    <ClCompile Include="Target.cpp">
+      <Filter>Enitity\Type</Filter>
+    </ClCompile>
+    <ClCompile Include="VictoryScreenState.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="DieScreenState.cpp">
+      <Filter>States</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -230,20 +245,35 @@
     <ClInclude Include="ReloadSystem.h">
       <Filter>Enitity\Projectile</Filter>
     </ClInclude>
-    <ClInclude Include="Target.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Level3.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Bomb.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Map3.h">
-      <Filter>Header Files</Filter>
+      <Filter>Level</Filter>
     </ClInclude>
     <ClInclude Include="Level4.h">
-      <Filter>Header Files</Filter>
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimScene5.h">
+      <Filter>Level\AnimScence</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimScene4.h">
+      <Filter>Level\AnimScence</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimScene3.h">
+      <Filter>Level\AnimScence</Filter>
+    </ClInclude>
+    <ClInclude Include="Map3.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Bomb.h">
+      <Filter>Enitity\Projectile</Filter>
+    </ClInclude>
+    <ClInclude Include="Target.h">
+      <Filter>Enitity\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="DieScreenState.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="VictoryScreenState.h">
+      <Filter>States</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

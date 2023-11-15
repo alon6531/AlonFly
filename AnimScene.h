@@ -3,6 +3,7 @@
 #include <iostream>
 #include "Timer.h"
 #include <math.h>
+#include "SFML/Audio.hpp"
 
 class AnimScene
 {

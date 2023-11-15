@@ -17,10 +17,19 @@ AnimScene1::AnimScene1()
 	boeing.setTexture(boeingTexture);
 	boeing.setScale(0.5, 0.5);
 	boeing.setPosition(1200, 20);
+
+
+
+	buffer.loadFromFile("Sound/TakeOF.wav");
+	sound.setVolume(100);
+	sound.setBuffer(buffer);
+	sound.play();
 }
 
 void AnimScene1::Update(float dt)
 {
+	
+	
 	if (moveForword) {
 		if (f15.getPosition().x < 500)
 			f15.move(dt * 300, 0);

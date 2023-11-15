@@ -2,6 +2,7 @@
 #include "Level.h"
 #include "Target.h"
 #include "AirportMap.h"
+#include "AnimScene5.h"
 
 class Level4 :
     public Level
@@ -12,6 +13,7 @@ private:
 	Map* map;
 	bool end;
 
+	Text* task;
 public:
 	Level4(F15& F15, Map* Map);
 

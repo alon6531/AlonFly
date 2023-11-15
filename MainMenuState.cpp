@@ -3,12 +3,11 @@
 
 MainMenuState::MainMenuState()
 {
-	this->startB = new Button(sf::Vector2f(610, 600), sf::Vector2f(150, 75), sf::Color::Red, "Play");
+	this->startB = new Button(sf::Vector2f(480, 500), sf::Vector2f(0.1, 0.1), "Image/StartB.png");
 	endState = false;
+	map = new Map1();
 
-
-
-	title = new Text("*AlonFly*", sf::Vector2f(580, 300));
+	title = new Text("ALON FLY", sf::Vector2f(550, 300), sf::Vector2f(2, 2), sf::Color::Black);
 }
 
 void MainMenuState::Update(float dt, std::stack<State*>& states)
@@ -17,13 +16,13 @@ void MainMenuState::Update(float dt, std::stack<State*>& states)
 		std::cout << "pressed";
 		states.push(new GameState());
 	}
-
+	map->Update(dt);
 	
 }
 
 void MainMenuState::Render(sf::RenderWindow& window)
 {
-
+	map->Render(window);
 	startB->Render(window);
 	title->Render(window);
 }

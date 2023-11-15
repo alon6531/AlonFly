@@ -4,8 +4,11 @@ Level3::Level3(F15& F15, Map* Map) : Level(F15, Map), f15(F15)
 {
 	map = new Map3();
 	end = false;
-	
+
 	f15.AddBomb(0.3, false, 20, 5);
+	f15.Sprite().setPosition(sf::Vector2f(0, 0));
+	f15.RemoveBullet();
+	f15.RemoveRokcet();
 	targetsSize = 4;
 	targets.push_back(new Target("Image/home.png", sf::Vector2f(500, 650), sf::Vector2f(100, 100)));
 	targets.push_back(new Target("Image/home.png", sf::Vector2f(300, 650), sf::Vector2f(100, 100)));
@@ -15,10 +18,15 @@ Level3::Level3(F15& F15, Map* Map) : Level(F15, Map), f15(F15)
 	targets2.push_back(new Target("Image/Build.png", sf::Vector2f(310, 700), sf::Vector2f(200, 200)));
 	targets2.push_back(new Target("Image/Build.png", sf::Vector2f(650, 700), sf::Vector2f(200, 200)));
 	targets2.push_back(new Target("Image/Build.png", sf::Vector2f(1050, 700), sf::Vector2f(200, 200)));
+
+	//sound.play();
+
+	task = new Text("*Bomb Tehran", sf::Vector2f(1100, 20), sf::Vector2f(1, 1), sf::Color::Black);
 }
 
 void Level3::Update(float dt)
 {
+
 	map->Update(dt);
 	f15.Update(dt);
 
@@ -49,7 +57,7 @@ void Level3::Update(float dt)
 					targets2Size--;
 				}
 				targets2[i]->Sprite().setScale(2.01, 2.01);
-				
+
 			}
 		}
 	}
@@ -80,6 +88,8 @@ void Level3::Render(sf::RenderWindow& Window)
 	for (int i = 0; i < targets2.size(); i++) {
 		targets2[i]->Render(Window);
 	}
+
+	task->Render(Window);
 }
 
 bool Level3::IsEnd()
@@ -89,5 +99,6 @@ bool Level3::IsEnd()
 
 void Level3::EndLevel(std::stack<Level*>& levels, std::stack<AnimScene*>* animScene)
 {
+	animScene->push(new AnimScene4());
 	levels.push(new Level4(f15, map));
 }

@@ -16,7 +16,7 @@ void Mig29::Update(float dt, sf::Sprite* TargetSprite)
 {
 
 
-	
+
 	if (TargetSprite->getPosition().x > Sprite().getPosition().x)
 	{
 		if (Sprite().getPosition().y > TargetSprite->getPosition().y) {

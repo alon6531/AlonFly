@@ -10,10 +10,15 @@ Level2::Level2(F15& F15, Map* Map) : Level(F15, Map), f15(F15), map(Map)
 	end = false;
 
 	F15.Sprite().setPosition(sf::Vector2f(900, 300));
+
+
+	task = new Text("*there is a Mig attacking you!* ", sf::Vector2f(900, 20), sf::Vector2f(1, 1), sf::Color::Red);
 }
 
 void Level2::Update(float dt)
 {
+
+
 	map->Update(dt);
 
 	f15.Update(dt);
@@ -25,7 +30,8 @@ void Level2::Update(float dt)
 		//mig hit f15
 		for (int j = 0; j < enemy[i]->GetBullet().size(); j++) {
 			if (f15.IsCollide(enemy[i]->GetBullet()[j]->rect())) {
-				f15.OnHit(1);
+				int damage = rand() % 3 + 1;
+				f15.OnHit(damage);
 				enemy[i]->DeleteBullet(j);
 				std::cout << f15.GetHealth() << "\n";
 			}
@@ -70,6 +76,8 @@ void Level2::Render(sf::RenderWindow& Window)
 	for (int i = 0; i < enemy.size(); i++) {
 		enemy[i]->Render(Window);
 	}
+
+	task->Render(Window);
 }
 
 bool Level2::IsEnd()
@@ -79,6 +87,7 @@ bool Level2::IsEnd()
 
 void Level2::EndLevel(std::stack<Level*>& levels, std::stack<AnimScene*>* animScene)
 {
-	if (animScene)
-		levels.push(new Level3(f15, map));
+	
+	animScene->push(new AnimScene3());
+	levels.push(new Level3(f15, map));
 }

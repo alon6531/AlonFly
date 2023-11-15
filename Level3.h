@@ -3,6 +3,7 @@
 #include "Target.h"
 #include "Map3.h"
 #include "Level4.h"
+#include "AnimScene4.h"
 
 class Level3 :
     public Level
@@ -16,6 +17,7 @@ private:
 	int targetsSize;
 	int targets2Size;
 
+	Text* task;
 public:
 	Level3(F15& F15, Map* Map);
 
